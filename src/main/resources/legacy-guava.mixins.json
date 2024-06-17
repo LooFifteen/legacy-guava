@@ -1,0 +1,26 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.lu15.legacyguava.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "CaveCarverMixin",
+    "TripwireHookBlockMixin",
+    "TypeFilterableList$1Mixin",
+    "TypeFilterableListMixin"
+  ],
+  "client": [
+    "BlockStateMapperMixin",
+    "ChunkRenderThreadMixin",
+    "ClientPlayNetworkHandler$3$1Mixin",
+    "ClientPlayNetworkHandlerMixin",
+    "PagedEntryListWidget$TextFieldEntryMixin",
+    "PlayerListEntryMixin",
+    "ResourcePackLoaderMixin",
+    "SpectatorMenuMixin",
+    "SpectatorMenuStateMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

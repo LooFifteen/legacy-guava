@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "legacy-guava",
+  "version": "${version}",
+  "name": "Legacy Guava",
+  "description": "Uses Mixins to update Guava to the latest version.",
+  "authors": [
+    "LooFifteen"
+  ],
+  "contact": {
+    "sources": "https://github.com/LooFifteen/legacy-guava"
+  },
+  "license": "MIT",
+  "icon": "assets/legacy-guava/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+
+    ]
+  },
+  "mixins": [
+    "legacy-guava.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "1.8.9"
+  }
+}
