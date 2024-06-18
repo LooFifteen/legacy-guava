@@ -4,7 +4,14 @@
     "config:recommended"
   ],
   "ignoreDeps": [
-    "net.legacyfabric:yarn",
-    "loom_version"
+    "net.legacyfabric:yarn"
+  ],
+  "separateMinorPatch": true,
+  "packageRules": [
+    {
+      "matchDepNames": ["fabric-loom", "legacy-looming"],
+      "matchUpdateTypes": "patch",
+      "enabled": false
+    }
   ]
 }
