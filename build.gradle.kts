@@ -28,6 +28,7 @@ base {
 
 repositories {
     mavenCentral()
+    maven("https://maven.fabricmc.net/")
     maven("https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1/")
 }
 
