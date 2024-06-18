@@ -1,4 +1,4 @@
-package dev.lu15.legacyguava.mixin;
+package dev.lu15.legacyguava.mixin.client;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.ListenableFuture;

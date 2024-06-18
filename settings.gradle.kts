@@ -6,9 +6,9 @@ pluginManagement {
         maven("https://repo.legacyfabric.net/repository/legacyfabric/")
     }
     plugins {
-        val loomVersion = "1.6-SNAPSHOT"
-        id("fabric-loom") version loomVersion
-        id("legacy-looming") version loomVersion
+        val loom_version: String by settings
+        id("fabric-loom") version loom_version
+        id("legacy-looming") version loom_version
     }
 }
 

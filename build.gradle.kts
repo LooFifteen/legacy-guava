@@ -5,25 +5,14 @@ plugins {
     `maven-publish`
 }
 
-val mod_version: String by project.properties
-val maven_group: String by project.properties
-val minecraft_version: String by project.properties
-val yarn_mappings: String by project.properties
-val loader_version: String by project.properties
-val archives_base_name: String by project.properties
-
-version = mod_version
-group = maven_group
+group = property("maven_group")!!
+version = property("mod_version")!!
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion.set(JavaLanguageVersion.of(8))
     }
     withSourcesJar()
-}
-
-base {
-    archivesName = archives_base_name
 }
 
 repositories {
@@ -33,9 +22,9 @@ repositories {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:${minecraft_version}")
-    mappings(legacy.yarn(minecraft_version, yarn_mappings))
-    modImplementation("net.fabricmc:fabric-loader:$loader_version")
+    minecraft("com.mojang:minecraft:${property("minecraft_version")}")
+    mappings("net.legacyfabric:yarn:${property("yarn_mappings")}")
+    modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 
     shadow(implementation("com.google.guava:guava:33.2.1-jre")!!)
 
@@ -45,11 +34,11 @@ dependencies {
 }
 
 tasks {
-    withType<ProcessResources> {
-        inputs.property("verison", mod_version)
+    processResources {
+        inputs.property("version", project.version)
 
         filesMatching("fabric.mod.json") {
-            expand(mapOf("version" to mod_version))
+            expand(mapOf("version" to project.version))
         }
     }
 
@@ -72,7 +61,7 @@ tasks {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            artifactId = archives_base_name
+            artifactId = property("archives_base_name").toString()
             from(components["java"])
         }
     }

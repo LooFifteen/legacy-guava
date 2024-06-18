@@ -1,4 +1,4 @@
-package dev.lu15.legacyguava.mixin;
+package dev.lu15.legacyguava.mixin.common;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.UnmodifiableIterator;

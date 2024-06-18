@@ -1,16 +1,16 @@
-package dev.lu15.legacyguava.mixin;
+package dev.lu15.legacyguava.mixin.client;
 
 import com.google.common.base.MoreObjects;
-import net.minecraft.client.gui.hud.spectator.SpectatorMenuState;
+import net.minecraft.client.gui.widget.PagedEntryListWidget;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(SpectatorMenuState.class)
-public abstract class SpectatorMenuStateMixin {
+@Mixin(PagedEntryListWidget.TextFieldEntry.class)
+public abstract class PagedEntryListWidget$TextFieldEntryMixin {
 
     @Redirect(
-            method = "getCommand",
+            method = "<init>",
             at = @At(value = "INVOKE", target = "Lcom/google/common/base/Objects;firstNonNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", remap = false)
     )
     private <T> T firstNonNull(T first, T second) {

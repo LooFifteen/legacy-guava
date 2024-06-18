@@ -1,13 +1,13 @@
-package dev.lu15.legacyguava.mixin;
+package dev.lu15.legacyguava.mixin.client;
 
 import com.google.common.base.MoreObjects;
-import net.minecraft.client.gui.hud.spectator.SpectatorMenu;
+import net.minecraft.client.gui.hud.spectator.SpectatorMenuState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(SpectatorMenu.class)
-public abstract class SpectatorMenuMixin {
+@Mixin(SpectatorMenuState.class)
+public abstract class SpectatorMenuStateMixin {
 
     @Redirect(
             method = "getCommand",

@@ -4,21 +4,21 @@
   "package": "dev.lu15.legacyguava.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "CaveCarverMixin",
-    "TripwireHookBlockMixin",
-    "TypeFilterableList$1Mixin",
-    "TypeFilterableListMixin"
+    "common.CaveCarverMixin",
+    "common.TripwireHookBlockMixin",
+    "common.TypeFilterableList$1Mixin",
+    "common.TypeFilterableListMixin"
   ],
   "client": [
-    "BlockStateMapperMixin",
-    "ChunkRenderThreadMixin",
-    "ClientPlayNetworkHandler$3$1Mixin",
-    "ClientPlayNetworkHandlerMixin",
-    "PagedEntryListWidget$TextFieldEntryMixin",
-    "PlayerListEntryMixin",
-    "ResourcePackLoaderMixin",
-    "SpectatorMenuMixin",
-    "SpectatorMenuStateMixin"
+    "client.BlockStateMapperMixin",
+    "client.ChunkRenderThreadMixin",
+    "client.ClientPlayNetworkHandler$3$1Mixin",
+    "client.ClientPlayNetworkHandlerMixin",
+    "client.PagedEntryListWidget$TextFieldEntryMixin",
+    "client.PlayerListEntryMixin",
+    "client.ResourcePackLoaderMixin",
+    "client.SpectatorMenuMixin",
+    "client.SpectatorMenuStateMixin"
   ],
   "injectors": {
     "defaultRequire": 1
