@@ -2,6 +2,7 @@ plugins {
     id("fabric-loom")
     id("legacy-looming")
     id("com.github.johnrengelman.shadow") version "8.1.1"
+    `maven-publish`
 }
 
 val mod_version: String by project.properties
@@ -63,5 +64,18 @@ tasks {
     remapJar {
         dependsOn(shadowJar)
         inputFile.set(shadowJar.get().archiveFile)
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            artifactId = archives_base_name
+            from(components["java"])
+        }
+    }
+
+    repositories {
+        mavenLocal()
     }
 }
