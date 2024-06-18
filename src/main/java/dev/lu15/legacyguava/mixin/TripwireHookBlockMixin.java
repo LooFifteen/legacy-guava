@@ -11,7 +11,7 @@ public abstract class TripwireHookBlockMixin {
 
     @Redirect(
             method = "update",
-            at = @At(value = "INVOKE", target = "Lcom/google/common/base/Objects;firstNonNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;")
+            at = @At(value = "INVOKE", target = "Lcom/google/common/base/Objects;firstNonNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", remap = false)
     )
     private <T> T firstNonNull(T first, T second) {
         return MoreObjects.firstNonNull(first, second);

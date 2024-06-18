@@ -13,7 +13,7 @@ public abstract class ChunkRenderThreadMixin {
 
     @Redirect(
             method = "method_10137",
-            at = @At(value = "INVOKE", target = "Lcom/google/common/util/concurrent/Futures;addCallback(Lcom/google/common/util/concurrent/ListenableFuture;Lcom/google/common/util/concurrent/FutureCallback;)V")
+            at = @At(value = "INVOKE", target = "Lcom/google/common/util/concurrent/Futures;addCallback(Lcom/google/common/util/concurrent/ListenableFuture;Lcom/google/common/util/concurrent/FutureCallback;)V", remap = false)
     )
     private <T> void addCallback(ListenableFuture<T> listenableFuture, FutureCallback<? super T> futureCallback) {
         LegacyGuava.addCallback(listenableFuture, futureCallback);

@@ -14,7 +14,7 @@ public abstract class TypeFilterableList$1Mixin {
      */
     @Redirect(
             method = "iterator",
-            at = @At(value = "INVOKE", target = "Lcom/google/common/collect/Iterators;emptyIterator()Lcom/google/common/collect/UnmodifiableIterator;")
+            at = @At(value = "INVOKE", target = "Lcom/google/common/collect/Iterators;emptyIterator()Lcom/google/common/collect/UnmodifiableIterator;", remap = false)
     )
     private <T> UnmodifiableIterator<T> firstNonNull() {
         return ImmutableSet.<T>of().iterator();
