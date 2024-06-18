@@ -71,6 +71,7 @@ publishing {
         maven {
             name = "hypera"
             url = uri("https://repo.hypera.dev/releases/")
+            credentials(PasswordCredentials::class)
         }
     }
 }
