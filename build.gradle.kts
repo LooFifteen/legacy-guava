@@ -18,6 +18,7 @@ java {
 repositories {
     mavenCentral()
     maven("https://maven.fabricmc.net/")
+    maven("https://repo.legacyfabric.net/repository/legacyfabric/")
     maven("https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1/")
 }
 
