@@ -2,5 +2,16 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "ignoreDeps": [
+    "net.legacyfabric:yarn"
+  ],
+  "separateMinorPatch": true,
+  "packageRules": [
+    {
+      "matchDepNames": ["loom_version"],
+      "matchUpdateTypes": "patch",
+      "enabled": false
+    }
   ]
 }
