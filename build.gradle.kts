@@ -30,8 +30,8 @@ dependencies {
     shadow(implementation("com.google.guava:guava:33.2.1-jre")!!)
 
     // dev env
-    modRuntimeOnly("me.djtheredstoner:DevAuth-fabric:1.2.1")
-    implementation("org.apache.logging.log4j:log4j-core:2.23.1")
+    modLocalRuntime("me.djtheredstoner:DevAuth-fabric:1.2.1")
+    localRuntime("org.apache.logging.log4j:log4j-core:2.23.1")
 }
 
 tasks {
@@ -68,6 +68,9 @@ publishing {
     }
 
     repositories {
-        mavenLocal()
+        maven {
+            name = "hypera"
+            url = uri("https://repo.hypera.dev/releases/")
+        }
     }
 }
