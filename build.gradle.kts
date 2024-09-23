@@ -27,7 +27,7 @@ dependencies {
     mappings("net.legacyfabric:yarn:${property("yarn_mappings")}")
     modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 
-    shadow(implementation("com.google.guava:guava:33.2.1-jre")!!)
+    shadow(implementation("com.google.guava:guava:33.3.1-jre")!!)
 
     // dev env
     modLocalRuntime("me.djtheredstoner:DevAuth-fabric:1.2.1")
